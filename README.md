@@ -6,22 +6,22 @@ A complete hack-and-slash combat system for Unreal Engine 5. Fully implemented i
 
 ## Features
 
-### 战斗系统
-- **轻/重/技能攻击连招** - 链式攻击，不同伤害和时机
-- **技能系统** - 可高度自定义，支持多技能配置
-- **空中连击** - 将敌人击飞并在空中继续攻击
-- **闪避** - 无敌帧和快速位移
+### Combat System
+- **Light/Heavy/Skill Attack Combos** - Chain attacks with different damage and timing
+- **Skill System** - Highly customizable, supports multiple skill configurations
+- **Air Combo** - Launch enemies and continue attacking in mid-air
+- **Dodge** - Invincibility frames and quick repositioning
 
-### 打击反馈
-- **1级/2级/3级镜头震动** - 对应不同强度的打击感
-- **顿帧（Hit Stop）** - 可配置的命中暂停，增强反馈
-- **击退与击飞** - 动态敌人受击反应
-- **起身动画** - 流畅的击倒恢复
+### Hit Feedback
+- **Level 1/2/3 Camera Shake** - Corresponding to different impact intensities
+- **Hit Stop** - Configurable freeze frame for enhanced feedback
+- **Knockback & Launch** - Dynamic enemy hit reactions
+- **Get-Up Animation** - Smooth recovery from knockdown
 
-### 伤害系统
-- **队伍分类** - Player_Team / Enemy_Team
-- **伤害倍率** - 可设置每次命中的基础伤害倍率
-- **死亡与受击状态** - 完整的状态机
+### Damage System
+- **Team Classification** - Player_Team / Enemy_Team
+- **Damage Multiplier** - Set base damage multiplier for each hit
+- **Death & Hit States** - Complete state machine
 
 ---
 
@@ -64,7 +64,7 @@ Select the Combat Component and adjust:
 - `Dodge_Invincible_Duration`
 - `Global_Anim_Play_Rate`
 - `Base_Damage`
-- 各种攻击和受击动画
+- Various attack and hit reaction animations
 
 ---
 
@@ -74,17 +74,17 @@ Add Attack Notify to your animation montages and configure:
 
 | Property | Description |
 |----------|-------------|
-| `Damage_Multiplier` | 本次攻击的伤害倍率 |
-| `Distance` | 攻击检测的距离 |
-| `Radius` | 攻击检测的半径范围 |
-| `Knockback_Distance` | 击退距离 |
-| `Launch_Height` | 击飞高度 |
-| `Time_Duration` | 顿帧持续时间 |
-| `Time_Rate` | 顿帧速率（0.02-0.1）|
-| `Hit_Shake_Amplitude` | 命中时的镜头震动幅度 |
-| `Camera_Shake_Level` | 镜头震动等级（1/2/3）|
-| `Miss_Camera_Shake` | 未命中时是否震动 |
-| `Debug_Attack_Range` | 是否显示攻击范围调试 |
+| `Damage_Multiplier` | Damage multiplier for this attack |
+| `Distance` | Attack detection distance |
+| `Radius` | Attack detection radius |
+| `Knockback_Distance` | Knockback distance |
+| `Launch_Height` | Launch height |
+| `Time_Duration` | Hit stop duration |
+| `Time_Rate` | Hit stop rate (0.02-0.1) |
+| `Hit_Shake_Amplitude` | Hit enemy shake amplitude |
+| `Camera_Shake_Level` | Camera shake level (1/2/3) |
+| `Miss_Camera_Shake` | Camera shake on miss |
+| `Debug_Attack_Range` | Show attack range debug |
 
 ---
 
@@ -92,8 +92,8 @@ Add Attack Notify to your animation montages and configure:
 
 | Team | Description |
 |------|-------------|
-| `Player_Team` | 玩家队伍，可攻击 Enemy_Team |
-| `Enemy_Team` | 敌人队伍，可攻击 Player_Team |
+| `Player_Team` | Player team, can attack Enemy_Team |
+| `Enemy_Team` | Enemy team, can attack Player_Team |
 
 Set team in component: `Team` property
 
