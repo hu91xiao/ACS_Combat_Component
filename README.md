@@ -25,15 +25,6 @@ A complete hack-and-slash combat system for Unreal Engine 5. Fully implemented i
 
 ---
 
-## Installation
-
-1. Copy `ACS_CombatComponent` folder to your project's `Plugins/` directory
-2. Restart Unreal Engine
-3. Enable plugin: Edit → Plugins → Gameplay → ACS Combat Component → Enable
-4. Restart editor
-
----
-
 ## Quick Start
 
 ### 1. Add Component to Character
